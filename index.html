@@ -39,6 +39,18 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
+
+      #mobile-menu {
+        transition: all 0.3s ease-in-out;
+        transform: translateY(-20px);
+        opacity: 0;
+        pointer-events: none;
+      }
+      #mobile-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+      }
     </style>
   </head>
   <body class="selection:bg-blue-500 selection:text-white">
@@ -53,9 +65,55 @@
           class="hidden md:flex space-x-10 text-[10px] uppercase tracking-[0.3em] font-bold text-gray-600"
         >
           <a href="#home" class="hover:text-blue-500 transition">Home</a>
-          <a href="#about" class="hover:text-blue-500 transition">About</a>
-          <a href="#catalog" class="hover:text-blue-500 transition">Catalog</a>
-          <a href="#contact" class="hover:text-blue-500 transition">Contact</a>
+          <a href="#about" class="hover:text-blue-500 transition">About Us</a>
+          <a href="#catalog" class="hover:text-blue-500 transition">Product Catalog</a>
+          <a href="#contact" class="hover:text-blue-500 transition">Contact Us</a>
+        </div>
+
+        <button id="menu-btn" class="md:hidden text-black focus:outline-none">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        id="mobile-menu"
+        class="absolute top-full left-0 w-full mt-2 bg-white/95 backdrop-blur-xl border border-black/5 rounded-2xl p-6 md:hidden shadow-2xl"
+      >
+        <div
+          class="flex flex-col space-y-6 text-[11px] uppercase tracking-[0.4em] font-black text-center"
+        >
+          <a
+            href="#home"
+            class="mobile-link py-2 hover:text-blue-500 transition border-b border-gray-50"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="mobile-link py-2 hover:text-blue-500 transition border-b border-gray-50"
+            >About Us</a
+          >
+          <a
+            href="#catalog"
+            class="mobile-link py-2 hover:text-blue-500 transition border-b border-gray-50"
+            >Product Catalog</a
+          >
+          <a
+            href="#contact"
+            class="mobile-link py-2 hover:text-blue-500 transition"
+            >Contact Us</a
+          >
         </div>
       </div>
     </nav>
@@ -178,20 +236,20 @@
 
     <section id="contact" class="py-32 px-6">
       <div
-        class="max-w-7xl mx-auto bento-card rounded-[50px] p-12 md:p-20 text-center overflow-hidden relative"
+        class="max-w-7xl mx-auto bento-card rounded-[40px] md:rounded-[50px] p-10 md:p-20 text-center overflow-hidden relative"
       >
         <div
           class="absolute top-0 right-0 w-64 h-64 bg-blue-100 blur-[120px]"
         ></div>
 
         <h2
-          class="text-4xl md:text-7xl font-black tracking-tighter mb-16 italic text-black"
+          class="text-4xl md:text-7xl font-black tracking-tighter mb-16 italic text-black relative z-10"
         >
           GET IN TOUCH
         </h2>
 
         <div
-          class="grid grid-cols-2 md:grid-cols-4 gap-10 text-left relative z-10"
+          class="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-10 text-center md:text-left relative z-10"
         >
           <div class="group">
             <div
@@ -201,11 +259,13 @@
             </div>
             <a
               href="#"
-              class="text-lg md:text-xl font-bold text-gray-700 hover:text-black transition"
-              >+62 812 3456</a
+              class="text-xl md:text-xl font-bold text-gray-700 hover:text-black transition tracking-tight"
             >
+              +62 812 3456
+            </a>
           </div>
-          <div class="group border-l border-gray-200 pl-6 md:pl-8">
+
+          <div class="group md:border-l border-gray-200 md:pl-8">
             <div
               class="text-blue-500 text-[10px] uppercase tracking-[0.3em] font-black mb-4 italic"
             >
@@ -213,11 +273,13 @@
             </div>
             <a
               href="#"
-              class="text-lg md:text-xl font-bold text-gray-700 hover:text-black transition"
-              >@theshop.official</a
+              class="text-xl md:text-xl font-bold text-gray-700 hover:text-black transition"
             >
+              @theshop.official
+            </a>
           </div>
-          <div class="group border-l border-gray-200 pl-6 md:pl-8">
+
+          <div class="group md:border-l border-gray-200 md:pl-8">
             <div
               class="text-blue-500 text-[10px] uppercase tracking-[0.3em] font-black mb-4 italic"
             >
@@ -225,17 +287,19 @@
             </div>
             <a
               href="#"
-              class="text-lg md:text-xl font-bold text-gray-700 hover:text-black transition break-all"
-              >hello@theshop.com</a
+              class="text-xl md:text-xl font-bold text-gray-700 hover:text-black transition break-all"
             >
+              hello@theshop.com
+            </a>
           </div>
-          <div class="group border-l border-gray-200 pl-6 md:pl-8">
+
+          <div class="group md:border-l border-gray-200 md:pl-8">
             <div
               class="text-blue-500 text-[10px] uppercase tracking-[0.3em] font-black mb-4 italic"
             >
               Location
             </div>
-            <p class="text-lg md:text-xl font-bold text-gray-700">
+            <p class="text-xl md:text-xl font-bold text-gray-700">
               Denpasar, Bali.
             </p>
           </div>
@@ -263,6 +327,29 @@
         </div>
       </div>
     </footer>
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileLinks = document.querySelectorAll(".mobile-link");
+
+      // Toggle menu saat tombol diklik
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("active");
+      });
+
+      // Tutup menu saat link diklik (agar user bisa melihat section yang dituju)
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.remove("active");
+        });
+      });
+
+      // Tutup menu saat user scroll (opsional, untuk UX yang lebih baik)
+      window.addEventListener("scroll", () => {
+        if (mobileMenu.classList.contains("active")) {
+          mobileMenu.classList.remove("active");
+        }
+      });
+    </script>
   </body>
 </html>
-
