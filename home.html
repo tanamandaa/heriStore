@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>THE SHOP | Ultra Modern Catalog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Perubahan Background & Text Utama */
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #ffffff;
+        color: #111;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Perubahan Warna Bento Card */
+      .bento-card {
+        background: #f9f9f9;
+        border: 1px solid #eeeeee;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+      .bento-card:hover {
+        border-color: #3b82f6;
+        transform: translateY(-5px);
+        background: #ffffff;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+      }
+
+      /* Perubahan Gradient Text agar kontras di background putih */
+      .text-gradient {
+        background: linear-gradient(to right, #111, #888);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
+  </head>
+  <body class="selection:bg-blue-500 selection:text-white">
+    <nav class="fixed w-full z-50 px-6 py-8">
+      <div
+        class="max-w-7xl mx-auto flex justify-between items-center bg-white/70 backdrop-blur-xl border border-black/5 rounded-2xl px-8 py-4 shadow-sm"
+      >
+        <div class="text-xl font-black tracking-tighter text-black">
+          Heri Store<span class="text-blue-500">.</span>
+        </div>
+        <div
+          class="hidden md:flex space-x-10 text-[10px] uppercase tracking-[0.3em] font-bold text-gray-600"
+        >
+          <a href="#home" class="hover:text-blue-500 transition">Home</a>
+          <a href="#about" class="hover:text-blue-500 transition">About</a>
+          <a href="#catalog" class="hover:text-blue-500 transition">Catalog</a>
+          <a href="#contact" class="hover:text-blue-500 transition">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <section
+      id="home"
+      class="min-h-screen flex flex-col justify-center items-center px-6 pt-20"
+    >
+      <h1
+        class="text-6xl md:text-[120px] font-black leading-[0.9] text-center tracking-tighter mb-8 text-gradient"
+      >
+        ELEVATE<br />YOUR STYLE.
+      </h1>
+      <p class="text-gray-500 text-center max-w-xl text-lg mb-12 font-light">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+        ligula eget dolor.
+      </p>
+      <a
+        href="#catalog"
+        class="bg-blue-600 hover:bg-blue-700 text-white px-12 py-5 rounded-2xl font-bold transition-all shadow-xl shadow-blue-500/30"
+      >
+        View Collection
+      </a>
+    </section>
+
+    <section id="about" class="py-32 px-6 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div
+          class="bento-card md:col-span-2 p-8 md:p-12 rounded-[40px] flex flex-col justify-end min-h-[400px]"
+        >
+          <div class="mb-auto">
+            <span
+              class="text-blue-500 text-[10px] uppercase tracking-[0.4em] font-black"
+              >Company Profile</span
+            >
+          </div>
+          <h2
+            class="text-3xl md:text-4xl font-black mb-6 italic tracking-tighter uppercase text-black"
+          >
+            Who We Are.
+          </h2>
+          <p
+            class="text-gray-600 text-lg md:text-xl leading-relaxed max-w-2xl font-light"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+        </div>
+        <div
+          class="bento-card rounded-[40px] overflow-hidden group relative min-h-[300px] md:min-h-full"
+        >
+          <img
+            src="perusahaan.jpg"
+            alt="Foto Perusahaan"
+            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700 scale-110 group-hover:scale-100"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="catalog" class="py-32 px-6 max-w-7xl mx-auto">
+      <div
+        class="mb-20 flex justify-between items-end border-b border-gray-100 pb-10"
+      >
+        <h2 class="text-5xl font-black tracking-tighter italic text-black">
+          LATEST<br />COLLECTION
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bento-card p-4 rounded-[32px] group">
+          <div
+            class="aspect-square bg-gray-200 rounded-[24px] mb-6 flex items-center justify-center overflow-hidden"
+          >
+            <span
+              class="text-gray-400 text-xs uppercase tracking-widest font-bold group-hover:scale-110 transition duration-500 italic"
+              >No Image</span
+            >
+          </div>
+          <div class="px-2 pb-4">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-lg font-bold text-black">Product_01</h3>
+            </div>
+            <p class="text-gray-400 text-xs mb-4 uppercase tracking-tighter">
+              Category Name
+            </p>
+            <div class="text-2xl font-black mb-4 text-black">Rp 000.000</div>
+            <p class="text-gray-500 text-[10px] leading-relaxed">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+            </p>
+          </div>
+        </div>
+
+        <div class="bento-card p-4 rounded-[32px] group">
+          <div
+            class="aspect-square bg-gray-200 rounded-[24px] mb-6 flex items-center justify-center overflow-hidden"
+          >
+            <span
+              class="text-gray-400 text-xs uppercase tracking-widest font-bold italic"
+              >No Image</span
+            >
+          </div>
+          <div class="px-2 pb-4">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-lg font-bold text-black">Product_02</h3>
+            </div>
+            <p class="text-gray-400 text-xs mb-4 uppercase tracking-tighter">
+              Category Name
+            </p>
+            <div class="text-2xl font-black mb-4 text-blue-500">Rp 000.000</div>
+            <p class="text-gray-500 text-[10px] leading-relaxed">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-32 px-6">
+      <div
+        class="max-w-7xl mx-auto bento-card rounded-[50px] p-12 md:p-20 text-center overflow-hidden relative"
+      >
+        <div
+          class="absolute top-0 right-0 w-64 h-64 bg-blue-100 blur-[120px]"
+        ></div>
+
+        <h2
+          class="text-4xl md:text-7xl font-black tracking-tighter mb-16 italic text-black"
+        >
+          GET IN TOUCH
+        </h2>
+
+        <div
+          class="grid grid-cols-2 md:grid-cols-4 gap-10 text-left relative z-10"
+        >
+          <div class="group">
+            <div
+              class="text-blue-500 text-[10px] uppercase tracking-[0.3em] font-black mb-4 italic"
+            >
+              WhatsApp
+            </div>
+            <a
+              href="#"
+              class="text-lg md:text-xl font-bold text-gray-700 hover:text-black transition"
+              >+62 812 3456</a
+            >
+          </div>
+          <div class="group border-l border-gray-200 pl-6 md:pl-8">
+            <div
+              class="text-blue-500 text-[10px] uppercase tracking-[0.3em] font-black mb-4 italic"
+            >
+              Instagram
+            </div>
+            <a
+              href="#"
+              class="text-lg md:text-xl font-bold text-gray-700 hover:text-black transition"
+              >@theshop.official</a
+            >
+          </div>
+          <div class="group border-l border-gray-200 pl-6 md:pl-8">
+            <div
+              class="text-blue-500 text-[10px] uppercase tracking-[0.3em] font-black mb-4 italic"
+            >
+              Email
+            </div>
+            <a
+              href="#"
+              class="text-lg md:text-xl font-bold text-gray-700 hover:text-black transition break-all"
+              >hello@theshop.com</a
+            >
+          </div>
+          <div class="group border-l border-gray-200 pl-6 md:pl-8">
+            <div
+              class="text-blue-500 text-[10px] uppercase tracking-[0.3em] font-black mb-4 italic"
+            >
+              Location
+            </div>
+            <p class="text-lg md:text-xl font-bold text-gray-700">
+              Denpasar, Bali.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-12 px-6 border-t border-gray-100 bg-white">
+      <div
+        class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6"
+      >
+        <p
+          class="text-[10px] md:text-xs text-gray-400 uppercase tracking-[0.3em] font-bold text-center md:text-left"
+        >
+          &copy; 2025 PT. Time Bali Mesari
+        </p>
+
+        <div class="flex">
+          <a
+            href="#home"
+            class="text-[10px] md:text-xs text-blue-600 hover:text-black transition uppercase tracking-[0.3em] font-black border border-blue-100 px-6 py-3 rounded-full md:border-none md:p-0"
+          >
+            Back to top ↑
+          </a>
+        </div>
+      </div>
+    </footer>
+    <a
+      href="#home"
+      class="fixed bottom-6 right-6 z-50 bg-white/80 backdrop-blur-md border border-gray-100 p-4 rounded-2xl shadow-xl md:hidden"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6 text-blue-600"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="5 10l7-7m0 0l7 7m-7-7v18"
+        />
+      </svg>
+    </a>
+  </body>
+</html>
